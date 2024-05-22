@@ -1,0 +1,50 @@
+body{
+background-color: grey;
+display:flex ;
+justify-content: center; 
+align-items: center;
+ height:100vh ; 
+}
+.container{
+
+background-color: white;
+border-radius: 10px;
+box-shadow: 0 0 20px;
+padding: 30px;
+width: 350px;
+
+text-align: center;}
+h1{
+margin: 0;
+color: black;
+
+}h4{
+
+color: black;
+}
+
+#guess-input{
+width: 90%;
+margin-top: 10px;
+margin-bottom: 10px;
+ border-radius: 10px;
+border: 1px solid black;
+}
+button{
+padding:10px 10px ; 
+border: none;
+margin-top: 10px;
+background-color: cadetblue;
+color: white;
+border-radius: 10px;
+cursor: pointer;}
+button:hover{
+
+   background-color: rgb( rgb(0, 255, 251)); 
+}
+#message{
+    font-weight: bold;
+ min-height: 20px;
+ margin-top: 15px;  
+
+}
