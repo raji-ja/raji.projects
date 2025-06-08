@@ -1,44 +1,22 @@
-let randomnumber=Math.floor(Math.random()*100)+1;
-let attempts=0;
-document.getElementById("submit-guess").addEventListener("click",function(){
-const UserGuess=Number(document.getElementById("guess-input").value);
-attempts++;
-if(UserGuess< 1 || UserGuess > 100)
-{
-displaymessage("please Enter a number between 1 to 100");
-}
-else if(UserGuess > randomnumber){
-displaymessage("Number is greater than Guessing")
-}
-else if(UserGuess < randomnumber){
-displaymessage("Number is lower than Guessing")
+const sections = document.querySelectorAll('.section');
 
-}
-else{
-displaymessage(`congrats! you guess it in $ {attempts}attempts`)
-ShowRestartButton();
-}
-}
-);
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
 
-document.getElementById("restart-game").addEventListener("click",function() {
- RestartGame () ; 
-}
+sections.forEach(section => {
+  observer.observe(section);
+});
 
-)
-function displaymessage(message){
-document.getElementById("message").textContent=message;
-
-}function ShowRestartButton(){
-document.getElementById("restart-game").style.display="block";
-document.getElementById("submit-Guess").style.display="none";
-}
-function RestartGame(){
-randomnumber=Math.floor(Math.random()*100)+1
-attempts=0;
-
-document.getElementById("guess-input").value="";
-document.getElementById("message").textContent="";
-document.getElementById("restart-game").style.display="none";
-document.getElementById("guess-input").disable=false;
-}
+// Smooth nav scroll (optional if using <a href="#id"> already)
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+  });
+});
