@@ -1,0 +1,188 @@
+/* ====== Reset & Base Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ====== Fullscreen Hero Section ====== */
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #eee;
+  }
+  
+  /* Navigation inside hero */
+  .hero nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .hero nav a {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.3s;
+    font-weight: bold;
+  }
+  
+  .hero nav a:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Scroll Down Indicator */
+  .scroll-down a {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #fff;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  
+  /* ====== Main Content Section ====== */
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+  }
+  
+  section {
+    margin-bottom: 60px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  h2 {
+    color: #1d2b64;
+    margin-bottom: 15px;
+    border-left: 5px solid #1d2b64;
+    padding-left: 12px;
+    font-size: 1.8rem;
+  }
+  
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  h3 {
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  /* ====== Project Cards ====== */
+  .project {
+    background: #e3f2fd;
+    padding: 15px 20px;
+    border-left: 5px solid #2196f3;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  
+  .project h3 {
+    margin-bottom: 5px;
+    color: #0d47a1;
+  }
+  
+  .project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ====== Contact Section ====== */
+  #contact p {
+    margin-bottom: 10px;
+  }
+  
+  #contact a {
+    color: #1d2b64;
+    font-weight: bold;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ====== Footer ====== */
+  footer {
+    background: #1d2b64;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* ====== Responsive Layout ====== */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .project {
+      padding: 15px;
+    }
+  }
+  
